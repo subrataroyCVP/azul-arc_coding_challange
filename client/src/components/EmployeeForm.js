@@ -24,8 +24,6 @@ const style = {
 };
 
 const EmployeeForm = ({ employee, open, handleClose }) => {
-    console.log("EmployeeForm rendered with employee:", employee);
-
     const { addEmployee, updateEmployee } = useEmployees();
     const isEditMode = Boolean(employee);
     const {
