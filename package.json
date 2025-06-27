@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a repository for completing Coding challenge for AzulArc.",
   "scripts": {
-    "server": "npm start --prefix server",
+    "server": "npm run dev --prefix server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
