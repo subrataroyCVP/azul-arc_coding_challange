@@ -1,0 +1,19 @@
+{
+  "name": "Employee-Management-System",
+  "version": "1.0.0",
+  "description": "This is a repository for completing Coding challenge for AzulArc.",
+  "scripts": {
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Subrata Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subrataroyCVP/azul-arc_coding_challange/issues"
+  },
+  "homepage": "https://github.com/subrataroyCVP/azul-arc_coding_challange#readme"
+}
