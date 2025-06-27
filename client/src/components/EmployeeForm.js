@@ -71,7 +71,7 @@ const EmployeeForm = ({ employee, open, handleClose }) => {
             setPhotoPreview(null);
             handleClose();
         },
-        [isEditMode, addEmployee, updateEmployee, handleClose]
+        [isEditMode, addEmployee, updateEmployee, handleClose, employee]
     );
 
     const handleFileChange = (e) => {

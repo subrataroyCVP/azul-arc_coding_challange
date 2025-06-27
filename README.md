@@ -36,13 +36,13 @@ This is a full-stack employee management application built with the MERN stack. 
 ### 1. Running Both Concurrently (Recommended)
 
 - Add environment variables based on example files:
-  ```
-  /client/.env
-  /server/.env
+  ```sh
+  chmod +x setup_env.sh
+  bash setup_env.sh
   ```
 - Install all dependencies:
   ```sh
-  npm install
+  npm install-dev
   ```
 - Start both server and client:
   ```sh
