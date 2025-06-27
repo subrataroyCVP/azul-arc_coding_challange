@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useEmployees } from "../context/EmployeeContext";
-// import EmployeeForm from "./EmployeeForm";
+import EmployeeForm from "./EmployeeForm";
 import {
     Container,
     Box,
@@ -72,15 +72,15 @@ const EmployeeList = () => {
                 </Button>
             </Box>
 
-            {/* <EmployeeForm
+            <EmployeeForm
                 open={modalOpen}
                 handleClose={handleCloseModal}
                 employee={employeeToEdit}
-            /> */}
+            />
 
             <Grid container spacing={3}>
                 {employees.map((emp) => (
-                    <Grid item xs={12} sm={6} md={4} key={emp._id}>
+                    <Grid key={emp._id}>
                         <Card>
                             <CardMedia
                                 component="img"
@@ -89,7 +89,7 @@ const EmployeeList = () => {
                                     emp.photo ||
                                     "https://placehold.co/600x400?text=No+Photo"
                                 }
-                                alt={emp.name}
+                                alt={`${emp.name} Photo`}
                             />
                             <CardContent>
                                 <Typography

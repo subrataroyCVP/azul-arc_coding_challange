@@ -14,7 +14,9 @@ router.get("/", async (req, res) => {
 
 //Post - Add a new employee
 router.post("/", async (req, res) => {
-    const { name, age, email, dob, address, photo } = req.body;
+    const { name, email, dob, address, photo } = req.body;
+
+    const age = calculateAge(dob);
 
     const newEmployee = new Employee({
         name,
@@ -64,3 +66,14 @@ router.delete("/:id", async (req, res) => {
 });
 
 module.exports = router;
+
+function calculateAge(dateString) {
+    const today = new Date();
+    const birthDate = new Date(dateString);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
